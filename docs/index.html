@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entitlement &amp; Pricing Service — XanoTS template</title>
+    <meta
+      name="description"
+      content="One governed service that resolves what a wealth client can access and what fee applies, from one versioned rule set, and returns the exact tier rule and fee schedule version that decided it. A XanoTS proof for Business Logic Centralization."
+    />
+    <style>
+      :root {
+        --bg: #0a0a0b;
+        --panel: #141416;
+        --panel-2: #1b1b1e;
+        --border: #2a2a2e;
+        --fg: #ededef;
+        --muted: #a1a1aa;
+        --primary: #34d399;
+        --primary-fg: #052e1b;
+        --accent: #93c5fd;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: radial-gradient(1200px 600px at 50% -10%, #16241d 0%, var(--bg) 55%);
+        color: var(--fg);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; }
+      .badge {
+        display: inline-flex; align-items: center; gap: 6px;
+        border: 1px solid var(--border); border-radius: 999px;
+        padding: 4px 12px; font-size: 13px; color: var(--muted); background: var(--panel);
+      }
+      header.hero { padding: 72px 0 40px; text-align: center; }
+      .hero h1 { font-size: 40px; line-height: 1.15; margin: 20px 0 12px; letter-spacing: -0.02em; }
+      .hero p.tag { font-size: 19px; color: var(--muted); max-width: 720px; margin: 0 auto 18px; }
+      .meta { color: var(--muted); font-size: 14px; margin: 8px 0 26px; }
+      .meta strong { color: var(--fg); font-weight: 600; }
+      .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+      .btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        border-radius: 10px; padding: 11px 20px; font-size: 15px; font-weight: 600;
+        border: 1px solid transparent; cursor: pointer; transition: all 0.15s ease;
+      }
+      .btn.primary { background: var(--primary); color: var(--primary-fg); }
+      .btn.primary:hover { filter: brightness(1.08); text-decoration: none; }
+      .btn.ghost { background: transparent; color: var(--fg); border-color: var(--border); }
+      .btn.ghost:hover { background: var(--panel-2); text-decoration: none; }
+      .shot {
+        margin: 44px auto 0; max-width: 940px;
+        border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+        box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
+      }
+      .shot img { display: block; width: 100%; height: auto; }
+      section { padding: 46px 0; border-top: 1px solid var(--border); }
+      section h2 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 8px; }
+      section p.lede { color: var(--muted); margin: 0 0 24px; max-width: 720px; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+      .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
+      .card h3 { margin: 0 0 6px; font-size: 16px; }
+      .card p { margin: 0; color: var(--muted); font-size: 14px; }
+      table { width: 100%; border-collapse: collapse; font-size: 14px; }
+      th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+      th { color: var(--muted); font-weight: 600; }
+      td code { color: var(--accent); }
+      .pill { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+      .pill.admin { color: var(--primary); border-color: #1f4d3a; background: #0f2019; }
+      .pill.svc { color: var(--accent); border-color: #274156; background: #0f1a24; }
+      pre {
+        background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+        padding: 16px 18px; overflow-x: auto; color: #e4e4e7; font-size: 13.5px; line-height: 1.55;
+      }
+      .note { background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 8px; padding: 14px 16px; color: var(--muted); font-size: 14px; }
+      footer { padding: 40px 0 64px; color: var(--muted); font-size: 13px; text-align: center; border-top: 1px solid var(--border); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <span class="badge">Play 1 · Business Logic Centralization · Wealth Management</span>
+        <h1>Entitlement &amp; Pricing Service</h1>
+        <p class="tag">
+          One governed service that resolves what a wealth client can access and what fee applies, from
+          one versioned rule set, and returns the exact tier rule and fee schedule version that decided it.
+        </p>
+        <p class="meta"><strong>7 tables</strong> · <strong>14 API endpoints</strong> · <strong>2 RBAC roles</strong> · authored in TypeScript with @xanots/sdk</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://github.com/xano-scratch/entitlement-pricing-service">View on GitHub</a>
+          <a class="btn ghost" href="#use">Use this template</a>
+        </div>
+      </header>
+
+      <div class="shot">
+        <img src="screenshot.png" alt="The resolve screen showing a client's entitlements, the applicable fee with its minimum-fee floor, and the exact tier rule and fee schedule version that produced the answer" />
+      </div>
+
+      <section>
+        <h2>What it demonstrates</h2>
+        <p class="lede">
+          A wealth platform asks two coupled questions in every client-facing app: what can this client
+          tier access, and what fee applies. When each app keeps its own copy of the rules, the answers
+          drift and no one can explain a past charge. This backend makes that logic one thing.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>One resolve, one answer</h3>
+            <p>A single endpoint reads the client, gathers the tier's entitlements, picks the fee rule, applies the minimum-fee floor, and returns the tier rule and schedule version that produced it.</p>
+          </div>
+          <div class="card">
+            <h3>Versioned pricing</h3>
+            <p>Fee schedules are versioned, one published at a time. An admin drafts a new version (cloned from the live rules), edits it, and publishes it. A re-resolve returns the new fee under the new version.</p>
+          </div>
+          <div class="card">
+            <h3>An immutable audit</h3>
+            <p>Every resolve writes a row that snapshots the entitlements, the fee, the firing rule id, and the schedule version. A later edit never changes a past row.</p>
+          </div>
+          <div class="card">
+            <h3>API-layer RBAC</h3>
+            <p>Two roles enforced at the endpoint, read fresh from the staff table on every call. Middleware-style access control, not row-level security.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>API surface</h2>
+        <p class="lede">Service endpoints need an app-service or admin token. Admin endpoints need a pricing-admin token.</p>
+        <table>
+          <thead>
+            <tr><th>Verb</th><th>Path</th><th>What it does</th><th>Access</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>POST</td><td><code>/api:eps_resolve/entitlements-and-fee</code></td><td>The governed resolve, plus an audit write</td><td><span class="pill svc">Service</span></td></tr>
+            <tr><td>GET</td><td><code>/api:eps_resolve/tier-grants/{tier_code}</code></td><td>Every entitlement a tier grants</td><td><span class="pill svc">Service</span></td></tr>
+            <tr><td>GET</td><td><code>/api:eps_resolve/resolution/{resolution_id}</code></td><td>One past resolution with its firing rule</td><td><span class="pill svc">Service</span></td></tr>
+            <tr><td>GET</td><td><code>/api:eps_resolve/resolutions</code></td><td>The audit log, newest first</td><td><span class="pill svc">Service</span></td></tr>
+            <tr><td>GET</td><td><code>/api:eps_resolve/seed</code></td><td>Bootstrap: reload data if empty, mint the demo tokens</td><td><span class="pill">Public</span></td></tr>
+            <tr><td>POST</td><td><code>/api:eps_admin/fee-schedule</code></td><td>Create a draft version (clones the published rules)</td><td><span class="pill admin">Admin</span></td></tr>
+            <tr><td>POST</td><td><code>/api:eps_admin/fee-schedule/publish</code></td><td>Publish a draft, archive the current published one</td><td><span class="pill admin">Admin</span></td></tr>
+            <tr><td>POST</td><td><code>/api:eps_admin/fee-rule</code></td><td>Upsert a fee line on a draft (published is immutable)</td><td><span class="pill admin">Admin</span></td></tr>
+            <tr><td>POST</td><td><code>/api:eps_admin/entitlement</code></td><td>Upsert a tier entitlement</td><td><span class="pill admin">Admin</span></td></tr>
+            <tr><td>POST</td><td><code>/api:eps_auth/login</code></td><td>Verify a credential and mint a role token</td><td><span class="pill">Public</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>The screens</h2>
+        <div class="grid">
+          <div class="card"><h3>Resolve</h3><p>Pick a client and a product, see the entitlements grid, the fee with its minimum-fee floor, and the exact tier rule and schedule version that fired.</p></div>
+          <div class="card"><h3>Fee schedules</h3><p>List every version, create a draft, edit its rules, and publish it. Editing a published version is refused.</p></div>
+          <div class="card"><h3>Audit</h3><p>The resolutions log, newest first. Open one to see its frozen snapshot, unchanged by later edits.</p></div>
+          <div class="card"><h3>Governance</h3><p>Switch role and run an access check that shows the API return 401, 403, and 200 for one admin endpoint.</p></div>
+        </div>
+      </section>
+
+      <section id="use">
+        <h2>Use this template</h2>
+        <p class="lede">
+          Point your coding agent at the repo, or clone it yourself. Either way you get a live, governed
+          Xano backend in about a minute.
+        </p>
+        <pre><code>Use the XanoTS template at
+https://github.com/xano-scratch/entitlement-pricing-service
+as a starting point. Clone it, run npm install, then npx xanots login and
+npm run xano:deploy to get a live governed entitlement and pricing service I
+can read and extend. Then help me adapt the tiers, entitlements, and fee rules
+to my own product.</code></pre>
+        <p class="lede" style="margin-top: 22px">Or run it directly:</p>
+        <pre><code>git clone https://github.com/xano-scratch/entitlement-pricing-service
+cd entitlement-pricing-service
+npm install
+npx xanots login
+npm run xano:deploy</code></pre>
+        <div class="note">
+          The frontend and backend deploy to a fresh, auto-expiring ephemeral environment that self-seeds,
+          so it is browsable the moment the URL prints. Any live preview link is disposable and re-deploys
+          for fresh links. Demo accounts and passwords are in the README, seeded on purpose for the
+          throwaway environment.
+        </div>
+      </section>
+
+      <footer>
+        Built with XanoTS. The entitlement and pricing rules live in one versioned, auditable API layer.
+        Access is controlled at the API layer by role, not row-level security.
+      </footer>
+    </div>
+  </body>
+</html>

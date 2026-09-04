@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "objects": {
+    "app:admin": {
+      "guid": "62a2658b57218b8d4e939a0fa78aefd9",
+      "canonical": "eps_admin",
+      "canonical_source": "code"
+    },
+    "app:auth": {
+      "guid": "4fe67f5a2d319eaaca7996700f27edd8",
+      "canonical": "eps_auth",
+      "canonical_source": "code"
+    },
+    "app:resolve": {
+      "guid": "5cf52f793b15ddb60e306e16a3c739f8",
+      "canonical": "eps_resolve",
+      "canonical_source": "code"
+    },
+    "dbo:clients": {
+      "guid": "60c010305b2b5e8d7484b079195365e1"
+    },
+    "dbo:entitlements": {
+      "guid": "386af250bba7f2c511acbb3c92a9075c"
+    },
+    "dbo:fee_rules": {
+      "guid": "1be5d54a0956d8f6b444a931ef487613"
+    },
+    "dbo:fee_schedules": {
+      "guid": "b676a929945eea1c745f85ef2936abbc"
+    },
+    "dbo:resolutions": {
+      "guid": "c15679c0c19ddad4f0bf1c6358e35efd"
+    },
+    "dbo:staff": {
+      "guid": "45722426fb164d5cf871016a08397ac1"
+    },
+    "dbo:tiers": {
+      "guid": "50792625de4bab272752bc9c21f6bef4"
+    },
+    "query:admin|GET|fee-rules": {
+      "guid": "85ae14506e330b717fa4758052a055f1"
+    },
+    "query:admin|GET|fee-schedules": {
+      "guid": "8000b1646ce061a5596ceac48338b777"
+    },
+    "query:admin|POST|entitlement": {
+      "guid": "3c4ae01b22aca6fdf57f6ebb654829c3"
+    },
+    "query:admin|POST|fee-rule": {
+      "guid": "cf7fd8a65aa6ed550fbaa1f3c9bc7e1d"
+    },
+    "query:admin|POST|fee-schedule": {
+      "guid": "f0fc7a1199636902e771fcb709520e24"
+    },
+    "query:admin|POST|fee-schedule/publish": {
+      "guid": "f949ed9b8773abd03e8aa4250266b044"
+    },
+    "query:auth|POST|login": {
+      "guid": "d39d74f907baeb484e9c93358362998a"
+    },
+    "query:resolve|GET|clients": {
+      "guid": "02bbcb5cf6144d0bd799541f7ee80dd3"
+    },
+    "query:resolve|GET|resolution/{resolution_id}": {
+      "guid": "0bb41fc587158670527a649737c26893"
+    },
+    "query:resolve|GET|resolutions": {
+      "guid": "5436aeeb561a7773ada373ff1f56b127"
+    },
+    "query:resolve|GET|seed": {
+      "guid": "735420b7edf2707e0cfb638584cc8657"
+    },
+    "query:resolve|GET|tier-grants/{tier_code}": {
+      "guid": "1afb467c46ebae23fce36598cfb7b2e2"
+    },
+    "query:resolve|GET|tiers": {
+      "guid": "906d2887e0c11f1e4ac0437da8960500"
+    },
+    "query:resolve|POST|entitlements-and-fee": {
+      "guid": "afb493e8f55485fd39a6069b567cd341"
+    }
+  }
+}
